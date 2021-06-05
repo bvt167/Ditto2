@@ -3,4 +3,20 @@
     <string name="dimension_ratio_square">1:1</string>
     <string name="pokemon_artwork_description">Pokemon Artwork</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Profile  -->
+    <string name="profile_header">TRAINER</string>
+    <string name="profile_name">Red</string>
+    <string name="profile_name_hint">Enter username</string>
+    <string name="profile_img_desc">Trainer image</string>
+    <string name="profile_edit_desc">Change profile image button</string>
+    <string name="profile_id">IDNo.</string>
+    <string name="profile_region">REGION</string>
+    <string name="profile_region_val">Kanto</string>
+    <string name="profile_score">SCORE</string>
+    <string name="choose_profile">Choose profile image</string>
+    <string name="done">Done</string>
+
+    <!-- Action Buttons -->
+    <string name="action_profile">Profile</string>
 </resources>

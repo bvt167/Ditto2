@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="@dimen/profile_width"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_header"
+        android:textAlignment="center"
+        android:textSize="@dimen/profile_text_25"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:background="@color/gold"
+        android:layout_marginTop="@dimen/profile_35"
+        android:padding="@dimen/profile_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="@dimen/profile_width"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="@string/profile_name"
+        android:textSize="@dimen/profile_text_25"
+        android:textStyle="bold"
+        android:hint="@string/profile_name_hint"
+        android:padding="@dimen/profile_5"
+        android:layout_marginTop="@dimen/profile_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="@dimen/profile_width"
+        android:layout_height="@dimen/profile_250"
+        android:src="@drawable/trainer_ash"
+        android:layout_marginTop="@dimen/profile_25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        android:contentDescription="@string/profile_img_desc" />
+
+    <ImageButton
+        android:id="@+id/ibChangeProfileImg"
+        android:layout_width="@dimen/profile_35"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_edit_24"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/ivProfileImage"
+        app:layout_constraintBottom_toBottomOf="@id/ivProfileImage"
+        android:contentDescription="@string/profile_edit_desc" />
+
+    <TextView
+        android:id="@+id/tvIdNo"
+        android:layout_width="@dimen/profile_width"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_id"
+        android:textSize="@dimen/profile_text_20"
+        android:textStyle="bold"
+        android:textColor="@color/dark_grey"
+        android:background="@drawable/rounded_text_view"
+        android:paddingTop="@dimen/profile_10"
+        android:paddingBottom="@dimen/profile_10"
+        android:paddingLeft="@dimen/profile_20"
+        android:layout_marginTop="@dimen/profile_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivProfileImage"
+        app:layout_constraintBottom_toTopOf="@id/tvRegion"/>
+
+    <TextView
+        android:id="@+id/tvIDNoValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/profile_text_20"
+        android:layout_marginRight="@dimen/profile_20"
+        app:layout_constraintEnd_toEndOf="@id/tvIdNo"
+        app:layout_constraintTop_toTopOf="@id/tvIdNo"
+        app:layout_constraintBottom_toBottomOf="@id/tvIdNo" />
+
+    <TextView
+        android:id="@+id/tvRegion"
+        android:layout_width="@dimen/profile_width"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_region"
+        android:textSize="@dimen/profile_text_20"
+        android:textStyle="bold"
+        android:textColor="@color/dark_grey"
+        android:background="@drawable/rounded_text_view"
+        android:paddingTop="@dimen/profile_10"
+        android:paddingBottom="@dimen/profile_10"
+        android:paddingLeft="@dimen/profile_20"
+        android:layout_marginTop="@dimen/profile_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvIdNo"
+        app:layout_constraintBottom_toTopOf="@id/tvScore"/>
+
+    <TextView
+        android:id="@+id/tvRegionValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_region_val"
+        android:textSize="@dimen/profile_text_20"
+        android:layout_marginRight="@dimen/profile_20"
+        app:layout_constraintEnd_toEndOf="@id/tvRegion"
+        app:layout_constraintTop_toTopOf="@id/tvRegion"
+        app:layout_constraintBottom_toBottomOf="@id/tvRegion" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="@dimen/profile_width"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_score"
+        android:textSize="@dimen/profile_text_20"
+        android:textStyle="bold"
+        android:textColor="@color/dark_grey"
+        android:background="@drawable/rounded_text_view"
+        android:paddingTop="@dimen/profile_10"
+        android:paddingBottom="@dimen/profile_10"
+        android:paddingLeft="@dimen/profile_20"
+        android:layout_marginTop="@dimen/profile_20"
+        android:layout_marginBottom="@dimen/profile_25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRegion"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tvScoreValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="@dimen/profile_text_20"
+        android:layout_marginRight="@dimen/profile_20"
+        app:layout_constraintEnd_toEndOf="@id/tvScore"
+        app:layout_constraintTop_toTopOf="@id/tvScore"
+        app:layout_constraintBottom_toBottomOf="@id/tvScore" />
+
+    <View
+        android:id="@+id/vChooseNewContainer"
+        android:layout_width="@dimen/profile_300"
+        android:layout_height="@dimen/profile_300"
+        android:background="@drawable/rounded_text_view"
+        android:backgroundTint="@color/white"
+        android:elevation="@dimen/profile_elevation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvChooseProfileImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_profile"
+        android:textSize="@dimen/profile_text_25"
+        android:textStyle="bold"
+        android:textColor="@color/dark_grey"
+        android:elevation="@dimen/profile_elevation"
+        android:layout_marginTop="@dimen/profile_15"
+        app:layout_constraintStart_toStartOf="@id/vChooseNewContainer"
+        app:layout_constraintEnd_toEndOf="@id/vChooseNewContainer"
+        app:layout_constraintTop_toTopOf="@id/vChooseNewContainer"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/ibFirstImg"
+        android:layout_width="@dimen/default_width"
+        android:layout_height="@dimen/profile_100"
+        android:src="@drawable/trainer_ash"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintDimensionRatio="1:1"
+        android:scaleType="fitCenter"
+        android:elevation="@dimen/profile_elevation"
+        app:layout_constraintStart_toStartOf="@id/vChooseNewContainer"
+        app:layout_constraintEnd_toStartOf="@+id/ibSecondImg"
+        app:layout_constraintTop_toTopOf="@id/vChooseNewContainer"
+        app:layout_constraintBottom_toBottomOf="@id/vChooseNewContainer"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/ibSecondImg"
+        android:layout_width="@dimen/default_width"
+        android:layout_height="@dimen/profile_100"
+        android:src="@drawable/trainer_brock"
+        android:background="@color/white"
+        app:layout_constraintDimensionRatio="1:1"
+        android:scaleType="fitCenter"
+        android:elevation="@dimen/profile_elevation"
+        app:layout_constraintStart_toEndOf="@id/ibFirstImg"
+        app:layout_constraintEnd_toEndOf="@id/vChooseNewContainer"
+        app:layout_constraintTop_toTopOf="@id/vChooseNewContainer"
+        app:layout_constraintBottom_toBottomOf="@id/vChooseNewContainer"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnApplyChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/done"
+        android:textColor="@color/dark_grey"
+        android:backgroundTint="@color/gold"
+        android:elevation="@dimen/profile_elevation"
+        android:layout_marginBottom="@dimen/profile_15"
+        app:layout_constraintStart_toStartOf="@id/vChooseNewContainer"
+        app:layout_constraintEnd_toEndOf="@id/vChooseNewContainer"
+        app:layout_constraintBottom_toBottomOf="@id/vChooseNewContainer"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
