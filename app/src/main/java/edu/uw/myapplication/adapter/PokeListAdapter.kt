@@ -36,7 +36,7 @@ class PokeListAdapter (private val listOfPokemon: PokemonList): RecyclerView.Ada
             pokemon.sprites.other.`official-artwork`?.front_default.let { pokePic.load(it) }
 
             // load the pokemon name
-            pokeName.text = pokemon.name
+            pokeName.text = pokemon.name.replaceFirstChar { it.uppercaseChar() }
         }
         holder.itemView.setOnClickListener{
             onPokemonClickListener(pokemon.name)
