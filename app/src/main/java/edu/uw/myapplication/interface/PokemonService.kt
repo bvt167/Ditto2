@@ -31,4 +31,9 @@ interface PokemonService {
     suspend fun getMove(
         @Path("id") id: Int
     ): Move
+
+    @GET("pokemon-species/{name}")
+    suspend fun getPokemonHints(
+        @Path("name") name: String
+    ): Species
 }

@@ -23,6 +23,7 @@ class DataRepository {
 
     suspend fun getPokemon(name: String): Pokemon = pokemonService.getPokemon(name)
     suspend fun getPokemonSpecies(name: String): PokemonSpecies = pokemonService.getPokemonSpecies(name)
+    suspend fun getPokemonHint(name: String): Species = pokemonService.getPokemonHints(name)
     suspend fun getPokemonList(numPokemonLimit: Int = DEFAULT_NUM_POKEMON_LIMIT): PokemonList = pokemonService.getPokemonList(numPokemonLimit)
     suspend fun getEvolutionChain(id: Int): EvolutionChain = pokemonService.getEvolutionChain(id)
     suspend fun getMove(id: Int): Move = pokemonService.getMove(id)
