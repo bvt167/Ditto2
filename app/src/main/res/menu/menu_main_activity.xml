@@ -7,4 +7,9 @@
         android:icon="@drawable/ic_baseline_person_24"
         android:title="@string/action_profile"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/info"
+        android:title="about"
+        app:showAsAction="always" />
 </menu>

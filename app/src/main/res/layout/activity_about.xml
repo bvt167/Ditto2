@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16px">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="182dp"
+        android:textSize="60px"/>
+
+    <TextView
+        android:id="@+id/created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ditto Was Created By"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="47dp" />
+
+    <TextView
+        android:id="@+id/creators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Angel McCrary-Lupson, Brandon Ta, Kevin Chou, Paola Vanegas, Moniyat Chowdhury"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="182dp" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Version of the App"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="182dp" />
+    <TextView
+        android:id="@+id/versionOf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="182dp" />
+
+
+</LinearLayout>

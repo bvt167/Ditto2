@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // add action buttons
         menuInflater.inflate(R.menu.menu_main_activity, menu)
@@ -65,6 +66,12 @@ class MainActivity : AppCompatActivity() {
             navigateToProfileActivity(this@MainActivity)
             true
         }
+
+        R.id.about -> {
+            navigateToAbout(this@MainActivity)
+            true
+        }
+
 
         else -> {
             // If we got here, the user's action was not recognized.
