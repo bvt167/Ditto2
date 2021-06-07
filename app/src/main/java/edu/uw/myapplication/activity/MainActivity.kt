@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater).apply { setContentView(root) }
 
-        launchGuessingGame()
+//        launchGuessingGame()
 
         with(binding){
             val list = runBlocking { dataRepository.getPokemonList() }
@@ -37,23 +37,19 @@ class MainActivity : AppCompatActivity() {
                     navigateToPokemonDetailActivity(this@MainActivity, name)
                 }
             }
-
-
-        }
-
-    }
-
-    // Who ever is making the nav bar edit the onclicklistnener to launch the guess game here
-    private fun launchGuessingGame() {
-        with(binding) {
-            lifecycleScope.launch {
-//                binding.someBtn.setOnClickListener {
-//                    navigateToGuessingGameActivity(this@MainActivity)
-//                }
-            }
         }
     }
 
+//    // Who ever is making the nav bar edit the onclicklistnener to launch the guess game here
+//    private fun launchGuessingGame() {
+//        with(binding) {
+//            lifecycleScope.launch {
+////                binding.someBtn.setOnClickListener {
+////                    navigateToGuessingGameActivity(this@MainActivity)
+////                }
+//            }
+//        }
+//    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // add action buttons
@@ -72,6 +68,10 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
+        R.id.guessing_game -> {
+            navigateToGuessingGameActivity(this@MainActivity)
+            true
+        }
 
         else -> {
             // If we got here, the user's action was not recognized.
