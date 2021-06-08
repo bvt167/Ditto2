@@ -19,4 +19,18 @@
 
     <!-- Action Buttons -->
     <string name="action_profile">Profile</string>
+
+    <!-- Guess Game-->
+    <string name="guess_game_title">Who\'s that Pokemon?</string>
+    <string name="guess_game_instruc">Test your Pokemon knowledge with a quick guessing game. Given the hints, type in the mystery Pokemon\'s name and score!</string>
+    <string name="start_game">Start</string>
+    <string name="pkmn_name_tv">Pokemon Name</string>
+    <string name="pkmn_desc_tv">Pokemon Description</string>
+    <string name="pkmn_dex_num_tv">Pokedex Number</string>
+    <string name="user_guess">Enter your guess</string>
+    <string name="submit_ans">Submit Answer</string>
+    <string name="next_question">Next</string>
+    <string name="play_again">Play Again</string>
+    <string name="guess_game_results">"You scored a %d out of %d!"</string>
+    <string name="guess_game_dex_hint">Pokedex Number: %d</string>
 </resources>

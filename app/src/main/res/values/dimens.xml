@@ -17,4 +17,17 @@
     <dimen name="profile_text_25">25sp</dimen>
     <dimen name="profile_text_20">20sp</dimen>
     <dimen name="profile_elevation">2dp</dimen>
+
+    <!-- Guess Game-->
+    <dimen name="game_title">36sp</dimen>
+    <dimen name="game_instruc">24sp</dimen>
+    <dimen name="guess_game_margin_med">12dp</dimen>
+    <dimen name="guess_game_margin_sm">8dp</dimen>
+    <dimen name="guess_game_margin_xl">48dp</dimen>
+    <dimen name="guess_game_margin_large">36dp</dimen>
+    <dimen name="guess_game_img_width">300dp</dimen>
+    <dimen name="guess_game_img_height">200dp</dimen>
+    <dimen name="guess_game_header">36sp</dimen>
+    <dimen name="guess_game_subheader">24sp</dimen>
+    <dimen name="guess_game_hints">18sp</dimen>
 </resources>

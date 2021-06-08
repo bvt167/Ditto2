@@ -66,6 +66,7 @@ class GuessingGameActivity : AppCompatActivity() {
         with (binding) {
             tvGameTitle.visibility = View.GONE
             tvGameInstructions.visibility = View.GONE
+            gameInstructionsLayout.visibility = View.GONE
             startGameBtn.visibility = View.GONE
             nextQuestionBtn.visibility = View.GONE
             pokemonName.visibility = View.GONE
@@ -75,7 +76,7 @@ class GuessingGameActivity : AppCompatActivity() {
 
     fun showGameResults() {
         with (binding) {
-            tvGameResults.setText("You scored a ${numberCorrect} out of ${totalNumRounds}!")
+            tvGameResults.setText(getResources().getString(R.string.guess_game_results, numberCorrect, totalNumRounds));
             tvGameResults.visibility = View.VISIBLE
             playAgainBtn.visibility = View.VISIBLE
 
@@ -128,13 +129,13 @@ class GuessingGameActivity : AppCompatActivity() {
 
             userGuessInput.setText("")
             makeGuessBtn.visibility = View.GONE
-            Log.i("PokeHint", input)
+//            Log.i("PokeHint", input)
             if (input == correctAnswer) {
-                Log.i("PokeHint", "Correct Answer!")
+//                Log.i("PokeHint", "Correct Answer!")
                 Toast.makeText(this@GuessingGameActivity, "Correct!", Toast.LENGTH_SHORT).show()
                 numberCorrect++
             } else {
-                Log.i("PokeHint", "Incorrect Answer!")
+//                Log.i("PokeHint", "Incorrect Answer!")
                 Toast.makeText(this@GuessingGameActivity, "Incorrect!", Toast.LENGTH_SHORT).show()
             }
             val pkmnName = correctAnswer.replaceFirstChar {
@@ -161,7 +162,7 @@ class GuessingGameActivity : AppCompatActivity() {
                 val randomPokemonName = dataRepository.getPokemonList().results.random().name
                 val pokemon = dataRepository.getPokemon(randomPokemonName)
                 correctPokemon = pokemon
-                Log.i("PokeHint", "ID: ${pokemon.name}, Name: ${pokemon.name}")
+//                Log.i("PokeHint", "ID: ${pokemon.name}, Name: ${pokemon.name}")
                 val hints = dataRepository.getPokemonHint(randomPokemonName)
                 correctAnswer = pokemon.name
                 var langIndex = findLangFlavorText(hints)
@@ -170,8 +171,8 @@ class GuessingGameActivity : AppCompatActivity() {
                 hintFlavorText = hintFlavorText.replace("\\n".toRegex(), " ") // removes new lines
                 hintFlavorText = hintFlavorText.replace(correctAnswer, "?", true) // removes pokemon name in case it's in the flavor text string
                 descHintTv.text = hintFlavorText
-                idHintTv.text = "Pokedex Number: " + pkmnID
-                Log.i("PokeHint", hints.flavor_text_entries[langIndex].flavor_text)
+                idHintTv.text = getResources().getString(R.string.guess_game_dex_hint, pkmnID)
+//                Log.i("PokeHint", hints.flavor_text_entries[langIndex].flavor_text)
 
             }
         }
@@ -181,7 +182,7 @@ class GuessingGameActivity : AppCompatActivity() {
         var index = 0
 
         for (i in hints.flavor_text_entries){
-            Log.i("PokeHint", i.language.name)
+//            Log.i("PokeHint", i.language.name)
             if (i.language.name == PREFERED_LANGUAGE_KEY) {
                 return index
             }
