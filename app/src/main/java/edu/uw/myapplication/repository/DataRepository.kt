@@ -11,7 +11,7 @@ import retrofit2.http.GET
  * https://pokeapi.co/api/v2/
  */
 
-const val DEFAULT_NUM_POKEMON_LIMIT = 898
+const val DEFAULT_NUM_POKEMON_LIMIT = 151
 
 class DataRepository {
 

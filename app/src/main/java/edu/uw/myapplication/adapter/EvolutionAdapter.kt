@@ -34,7 +34,8 @@ class EvolutionAdapter(private val pokemon: List<Pokemon>, private val evolution
             rvTypes.layoutManager = LinearLayoutManager(application, LinearLayoutManager.HORIZONTAL, false)
             rvTypes.adapter = TypeAdapter(currentPokemon.types, application)
 
-            root.setOnClickListener { onEvolutionClickListener(currentPokemon) }
+            // Broken for now, data parcel too large
+//            root.setOnClickListener { onEvolutionClickListener(currentPokemon) }
         }
     }
 
